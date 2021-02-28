@@ -1,0 +1,635 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&family=Montserrat+Alternates:wght@300;400&family=PT+Sans&family=Rubik:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+    text-transform: capitalize;
+
+}
+
+:root {
+    --dark: #2b2d42;
+    --light: #adb5bd;
+    --border: #dee2e6;
+    --border-btn: #edf2f4;
+}
+
+
+html {
+    font-size: 62.5%; /* it means now 1rem = 10px*/
+}
+
+/*common style*/
+.about-title, .services-title, .contact-title, .project-title {
+    position: relative;
+}
+
+.title::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
+.title::after {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 0 5px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.left-hero .main-heading {
+    font-size: 3.5rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.left-hero .sub-heading {
+    font-size: 6.5rem;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+
+.left-hero .sub-text {
+    font-size: 3rem;
+    font-family: 'Montserrat+Alternates', sans-serif;
+}
+
+.hero-btn {
+    padding: 0.8rem 2rem;
+    border-radius: 1rem;
+    border: none;
+    font-size: 1.4rem;
+    background-color: indianred;
+    transition: all 200ms ease-in;
+    font-weight: bold;
+}
+
+.hero-btn:hover {
+    color: #d53369;
+    background-color: white;
+    border: 1.5px solid #d53369;
+}
+
+/*navbar style*/
+.navbar a {
+    color: #000;
+    font-size: 2rem;
+
+    font-weight: bold;
+    transition: all 0.2s ease-in;
+}
+
+.navbar a:hover {
+    color: crimson;
+}
+
+#nav-btn:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-toggler-icon {
+    width: 3rem;
+    height: auto;
+}
+
+.houseimg {
+    width: 35vw;
+    animation: floating 2s ease-in-out;
+}
+
+.main-logo {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.main-logo img {
+    width: 5rem;
+}
+
+/*home style*/
+.home {
+    height: 70vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/*about style*/
+
+.about-title .title::after {
+    content: "who i am";
+}
+
+.about .main-heading {
+    font-size: 4rem;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .sub-heading {
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: 'Ubuntu', sans-serif;
+    margin-bottom: 2rem;
+}
+
+.about .sub-text {
+    font-size: 3rem;
+    font-family: 'Montserrat+Alternates', sans-serif;
+}
+
+.about-text {
+    font-size: 1.7rem;
+}
+
+.about-right .sub-heading {
+    font-size: 3rem;
+}
+
+.sub-text span {
+    color: crimson;
+}
+
+/*footer style*/
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: #E4E2FF;
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*services style*/
+.services-title .title::after {
+    content: "What i provide";
+}
+
+.ourservice-text {
+    font-size: 1.5rem;
+}
+
+.box {
+    position: relative;
+    height: 15rem;
+    background-color: white;
+    box-shadow: 0 0 15px 4px rgba(68, 63, 63, 0.30);
+    border-radius: 8px;
+    animation: floating 2s linear;
+}
+
+.box-1:hover {
+    background: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+
+}
+
+.box-2:hover {
+    background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+}
+
+.box-3:hover {
+    background: linear-gradient(90deg, #ceaefa 0%, #515ada 100%);
+}
+
+
+.box-4:hover {
+    background: linear-gradient(90deg, #fcff9e 0%, #c67700 100%);
+}
+
+.box-5:hover {
+    background: linear-gradient(90deg, #00d2ff 0%, #3a47d5 100%);
+}
+
+.box-6:hover {
+    background: linear-gradient(90deg, #9ebd13 0%, #008552 100%);
+}
+
+.box-4, .box-5, .box-6 {
+    height: 25rem;
+}
+
+#me {
+    border: 4px solid crimson;
+    border-radius: 4rem;
+    width: 20vw;
+    height: 25vw;
+}
+
+.box .sub-text {
+    color: #d53369;
+}
+
+/*projects style*/
+
+.project-title .title::after {
+    content: "What i developed";
+}
+
+/*contact style*/
+
+.contact-title .title::after {
+    content: "get in touch";
+}
+
+.contact-left .main-heading {
+    font-size: 2rem;
+    font-weight: bold;;
+}
+
+.contact-left .sub-heading {
+    font-size: 1.6rem;
+    font-weight: 100;
+}
+
+.contact-p {
+    font-size: 1.5rem;
+}
+
+.contact-sub button {
+    background: #d53369;
+    padding: 0.8rem 4rem;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact-sub button:focus {
+    box-shadow: none;
+}
+
+
+/*login */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+}
+
+.login form {
+    display: block;
+    width: 90%;
+    max-width: 32rem;
+    padding: 3rem 2rem;
+    border: 2px solid crimson;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 1.6rem;
+
+}
+
+.login form h1 {
+    color: crimson;
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.err-msg {
+    padding: 10px 15px;
+    background-color: #000;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    color: red;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.login form .form-group {
+    margin-bottom: 3rem;
+}
+
+.login form label {
+    display: block;
+    color: crimson;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.login form input {
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    text-transform: none;
+
+}
+
+.login form input:not([type="submit"]) {
+    display: block;
+    width: 100%;
+    padding: 1.2rem;
+    border-radius: 8px;
+    background-color: rgba(100, 80, 80, 0.2);
+    box-shadow: 0 0 0 rgba(73, 61, 61, 0);
+    transition: 0.4s;
+    color: #222;
+    font-size: 1.6rem;
+    font-weight: 300;
+    margin: 0;
+}
+
+.login form input:not([type="submit"])::placeholder {
+    color: #3c3435;
+}
+
+.login form input:not([type="submit"]):focus, form input:not([type="submit"]):valid {
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(59, 57, 57, 0.2);
+}
+
+.login form input[type="submit"] {
+    display: block;
+    width: 90%;
+    padding: 1.3rem;
+    border-radius: 8px;
+    background-color: #2F4960;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    color: #FFF;
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/*contacts*/
+
+.border-shadow {
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #e9ecef;
+}
+
+.text-dark {
+    color: var(--dark);
+}
+
+.contact-light {
+    color: var(--light);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient .userimg {
+    width: 1.5rem;
+    margin-left: 0.2rem;
+}
+
+#site-main {
+    margin-top: 2em;
+    font-family: 'Barlow', sans-serif;
+}
+
+#site-main .container .box-nav > a {
+    font-size: 1em;
+    padding: .5em 1em;
+}
+
+#site-main .container form {
+    margin: 2em 0;
+}
+
+table {
+    border-spacing: 0;
+    width: 100%;
+}
+
+
+.table td, .table th {
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+    text-transform: none;
+
+}
+
+.show_name {
+    text-transform: capitalize !important;
+}
+.table td > a.btn {
+    padding: .3em 1em;
+    font-size: 1.1em;
+    margin: 0 .2em;
+}
+
+.table tr:hover {
+    background-color: #06d6a0;
+}
+
+.table tr:hover td > a {
+    box-shadow: none;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: var(--dark);
+    border-color: #32383e;
+}
+
+/*  add contact & update contact */
+.form-title {
+    margin-top: 2em;
+}
+
+.form-title > h2 {
+    padding: .5em 0;
+}
+
+.new_contact {
+    max-width: 786px;
+    margin: auto;
+}
+
+#update_contact .form-group,
+#add_contact .form-group {
+    margin: .4em 0;
+}
+
+
+#update_contact .form-group input,
+#add_contact .form-group input {
+    text-transform: none;
+    width: 100%;
+    padding: .6em 1em;
+    margin: .5em 0;
+    border: 1px solid var(--border);
+    font-family: 'Barlow', sans-serif;
+    font-size: 1em;
+    border-radius: .2em;
+}
+#add_contact_name input {
+    text-transform: capitalize!important;
+}
+
+#update_contact .form-group .btn,
+#add_contact .form-group .btn {
+    width: 100%;
+    padding: .9em 1em;
+    background-color: #16db93;
+    border: none;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: .2em;
+    margin: .5em 0;
+}
+
+#update_contact .form-group .btn:hover,
+#add_contact .form-group .btn:hover {
+    background-color: var(--dark);
+    color: var(--border);
+}
+
+/*contacts end*/
+
+
+/*media queries*/
+/*common*/
+
+@media (max-width: 770px) {
+
+    .home-row {
+        text-align: center;
+    }
+
+    .hero-text .main-heading {
+        font-size: 2rem;
+    }
+
+    .hero-text .sub-heading {
+        font-size: 4rem;
+    }
+
+    .hero-text .sub-text {
+        font-size: 1.25rem;
+    }
+
+    .homefigure {
+        padding-top: 7rem;
+
+    }
+
+    .homefigure img {
+        width: 50vw;
+    }
+
+    .about .row {
+        text-align: center;
+        padding: 2rem;
+    }
+
+    #me {
+        width: 50vw;
+        height: 35vh;
+    }
+
+    .contact {
+        text-align: center;
+        padding: 2rem;
+    }
+
+}
+
+/*home*/
+@media (min-width: 770px) {
+    .ourservices {
+        position: relative;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media (max-width: 913px) {
+    .hero-text .main-heading {
+        font-size: 2.75rem;
+    }
+
+    .hero-text .sub-heading {
+        font-size: 5rem;
+    }
+
+    .hero-text .sub-text {
+        font-size: 2rem;
+    }
+
+    .hero-btn {
+        padding: 0.7rem 1.4rem;
+    }
+}
+
+@media (max-width: 440px) {
+
+    .homefigure img {
+        width: 80vw;
+    }
+
+    .error figure img {
+        width: 80vw;
+    }
+
+}
+
+/*about*/
+@media (max-width: 1114px) {
+    .about-right .sub-heading {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 838px) {
+    .about-right .sub-heading {
+        font-size: 2.5rem;
+    }
+
+    .about-right .about-text {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media (max-width: 375px) {
+    #me {
+        width: 60vw;
+        height: 35vh;
+    }
+
+    .error figure img {
+        width: 80vw;
+    }
+
+}
+
+/*animations*/
+@keyframes floating {
+    0% {
+        margin-top: 3rem;
+    }
+    25% {
+        margin: 0;
+    }
+    50% {
+        margin-top: 1rem;
+    }
+    100% {
+        margin: 0;
+    }
+}

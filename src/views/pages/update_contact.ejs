@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- include header -->
+    <%- include('../partials/header.ejs') -%>
+</head>
+<body>
+<!--include navbar-->
+<%- include('../partials/navbar.ejs') -%>
+<!--main site-->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/businessContact"><i class="fas fa-angle-double-left"></i> All Contacts</a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update User</h2>
+            <span class="text-light">Use the below form to Update an account</span>
+        </div>
+
+        <!-- update user form -->
+        <form method="Post" id="update_contact">
+            <div class="new_contact">
+                <div class="form-group">
+                    <label for="name" class="text-light">Name</label>
+                    <input type="hidden" name="id" value="<%= contact._id %>">
+                    <input type="text" name="name" value="<%= contact.name %>" placeholder="Mark Stoenis">
+                </div>
+                <div class="form-group">
+                    <label for="Email" class="text-light">Email</label>
+                    <input type="email" name="email" value="<%= contact.email %>" placeholder="example@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="phoneno" class="text-light">Email</label>
+                    <input type="text" name="phoneno" value="<%= contact.phoneno %>" placeholder="1234567891">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update" value="update">Save</button>
+                    <button type="submit" class="btn text-dark Delete" value="delete">Delete</button>
+                    <button type="submit" class="btn text-dark cancel" value="cancel" formaction="/businessContact"
+                            formmethod="post">Cancel
+                    </button>
+                </div>
+
+            </div>
+        </form>
+        <!--/update user form -->
+    </div>
+</main>
+<!--/main site-->
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

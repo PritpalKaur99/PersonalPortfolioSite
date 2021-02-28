@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- include header -->
+    <%- include('../partials/header.ejs') -%>
+
+</head>
+<body>
+<!-- include navbar -->
+<%- include('../partials/navbar.ejs') -%>
+
+<div class="container-fluid mt-5" id="contactform">
+    <div class="row py-3"><h1 class="text-center main-heading"> Contact Us</h1>
+        <div class="col-md-10 col-12 mx-auto">
+            <div class="contact-title text-center mt-5">
+                <h2 class="title"></h2>
+            </div>
+            <div class="row contact">
+                <div class="col-md-6 col-12 left-hero">
+                    <h1 class="sub-text">Get in touch</h1>
+                    <div class="row contact-left">
+                        <div class="col-md-12 main-heading">Name</div>
+                        <div class="col-md-12 pb-3 sub-heading">Pritpal Kaur</div>
+                        <div class="col-md-12 main-heading">Id</div>
+                        <div class="col-md-12 pb-3 sub-heading">301135001</div>
+                        <div class="col-md-12 main-heading">email</div>
+                        <div class="col-md-12 pb-3 sub-heading">pritpalkaurvirk99@gmail.com
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12  left-hero d-flex justify-content-center align-items-start flex-column">
+                    <div class="col-md-10 col-12 mx-auto">
+
+                        <form class="row mx-auto g-3 mt-4" action="/message" method="post">
+                            <div class="col-md-6">
+                                <label for="firstname" class="form-label">Firstname</label>
+                                <input type="text" class="form-control" id="firstname" name="firstname" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastname" class="form-label">Lastname</label>
+                                <input type="text" class="form-control" id="lastname" name="lastname" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputEmail" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" name="email" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phoneno" class="form-label">Phoneno</label>
+                                <input type="text" class="form-control" id="phoneno" name="phoneno" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="message" class="form-label">Message us</label>
+                                <textarea class="form-control" placeholder="Leave a comment here" id="message"
+                                          style="height: 100px"></textarea>
+                            </div>
+                            <div class="col-12 contact-sub">
+                                <button type="submit" class="btn" id="submit-btn">Submit</button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- include footer -->
+<%- include('../partials/footer.ejs') -%>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
